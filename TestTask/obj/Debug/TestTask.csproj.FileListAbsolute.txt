@@ -1,0 +1,12 @@
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\TestTask.exe.config
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\TestTask.exe
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\TestTask.pdb
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\Mono.Cecil.dll
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\bin\Debug\Mono.Cecil.Rocks.dll
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\obj\Debug\TestTask.csproj.CoreCompileInputs.cache
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\obj\Debug\TestTask.csproj.CopyComplete
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\obj\Debug\TestTask.exe
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\obj\Debug\TestTask.pdb
+C:\Users\Евгения\Desktop\С#\TestTask\TestTask\obj\Debug\TestTask.csprojAssemblyReference.cache
