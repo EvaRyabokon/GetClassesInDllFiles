@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Mono.Cecil;
-using Mono.Cecil.Cil;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace TestTask
@@ -18,7 +14,7 @@ namespace TestTask
             public List<string> PublicMethods;
             public List<string> ProtectedMethods;
 
-            public ClassInfo(string name, List<string>  publicMethods, List<string> protectedMethods)
+            public ClassInfo(string name, List<string> publicMethods, List<string> protectedMethods)
             {
                 Name = name;
                 PublicMethods = publicMethods;
@@ -30,7 +26,7 @@ namespace TestTask
             public List<ClassInfo> Classes;
             public List<string> FailedDlls;
 
-            public DllsInfo( List<ClassInfo> classes, List<string> failedDlls)
+            public DllsInfo(List<ClassInfo> classes, List<string> failedDlls)
             {
                 Classes = classes;
                 FailedDlls = failedDlls;
@@ -107,9 +103,9 @@ namespace TestTask
             return new DllsInfo(classesInfo, failedDlls);
         }
 
-        public static void PrintResult(DllsInfo files)
+        public static void PrintResult(DllsInfo dllsInfo)
         {
-            foreach (var c in files.Classes)
+            foreach (var c in dllsInfo.Classes)
             {
                 Console.WriteLine("CLASS: " + c.Name);
                 foreach (var protectedMethod in c.ProtectedMethods)
@@ -123,16 +119,19 @@ namespace TestTask
                 }
             }
 
-            foreach (var dll in files.FailedDlls)
+            if (dllsInfo.FailedDlls.Any())
             {
-                Console.WriteLine("Ошибка в формате файла");
-                Console.WriteLine(dll);
+                Console.WriteLine("Failed dlls:");
+                foreach (var dll in dllsInfo.FailedDlls)
+                {
+                    Console.WriteLine(dll);
+                }
             }
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Write the file directory ");
+            Console.WriteLine("Write the file directory:");
             string path = Console.ReadLine();
             DllsInfo files = GetMethodsFromDllFiles(path);
             PrintResult(files);
